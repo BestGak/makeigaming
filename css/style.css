@@ -142,9 +142,17 @@ body {
     
 }
 /* All styles */
-
+main {
+    padding-top: 71px;
+}
 header {
     padding: 15px 0;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: #090D15;
+    z-index: 12;
 }
 .header__container {
     display: flex;
@@ -213,6 +221,7 @@ header {
     padding: 17px 38px;
     position: relative;
     z-index: 2;
+    border: none;
 }
 .main__btn:hover {
     background: linear-gradient(90deg, #505AB7 0%, #A250B7 100%);
@@ -413,14 +422,15 @@ header {
     font-size: 14px;
     line-height: 24px;
 }
-.way__item-link {
+.way__item-label {
     background: rgb(80, 90, 183, .1);
     color: #505AB7;
     border: none;
     padding: 12px 30px;
     color: #505AB7;
+    cursor: default;
 }
-.way__item-link:hover {
+.way__item-label:hover {
     background: rgb(80, 90, 183, .1);
     color: #505AB7;
     border: none;

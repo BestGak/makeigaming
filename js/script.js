@@ -20,15 +20,22 @@ $(function() {
   copyBtn.addEventListener('mouseleave' , () => document.body.classList.remove('copied'));
 
 // Behavior Scroll
-const smoothLinks = document.querySelectorAll('a[href^="#"]');
-for (let smoothLink of smoothLinks) {
-    smoothLink.addEventListener('click', function (e) {
+document.querySelectorAll('a[href^="#"').forEach(link => {
+    link.addEventListener('click', function(e) {
         e.preventDefault();
-        const id = smoothLink.getAttribute('href');
 
-        document.querySelector(id).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+        let href = this.getAttribute('href').substring(1);
+
+        const scrollTarget = document.getElementById(href);
+
+        const topOffset = document.querySelector('header').offsetHeight;
+        // const topOffset = 0; // если не нужен отступ сверху 
+        const elementPosition = scrollTarget.getBoundingClientRect().top;
+        const offsetPosition = elementPosition - topOffset;
+
+        window.scrollBy({
+            top: offsetPosition,
+            behavior: 'smooth'
         });
     });
-};
+});
