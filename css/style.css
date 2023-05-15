@@ -526,7 +526,7 @@ footer {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     visibility: hidden;
     opacity: 0;
-    transition: all .5s;
+    /* transition: all .5s; */
 }
 .contact__contacts button:hover + .contact__copy-tooltip {
     visibility: visible;
@@ -537,7 +537,7 @@ footer {
     opacity: 0; 
     z-index: 5;
     color: #27FF23; 
-    transition: .8s;
+    /* transition: .8s; */
 }
 .copied .contact__copy-tooltip--copied {
     visibility: visible;
