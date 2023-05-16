@@ -6,13 +6,27 @@ menuBtn.addEventListener('click' , () => document.querySelector('html').classLis
 menuLinks.forEach((item) => item.addEventListener('click' , () =>  document.querySelector('html').classList.toggle('active')));
 
 // Marquee
-$(function() {
-    $('.marquee').marquee({
-      duration: 15000,
-      startVisible: true,
-      duplicated: true
+window.addEventListener('load', () => {
+  console.log(window.innerWidth);
+  if(window.innerWidth > 1023) {
+      $(function() {
+        $('.marquee').marquee({
+          duration: 15000,
+          startVisible: true,
+          duplicated: true
+        });
+      });
+  }  else {
+    $(function() {
+      $('.marquee').marquee({
+        duration: 8000,
+        startVisible: true,
+        duplicated: true
+      });
     });
-  });
+  }
+})
+
 
 
   // Copy btn
