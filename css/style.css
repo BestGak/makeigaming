@@ -598,12 +598,14 @@ footer {
 }
 .active .menu-btn span:nth-of-type(2) {
     transform: translate(28%, 0%) rotate(45deg);
+    -webkit-tranform: translate(28%, 0%) rotate(45deg);
     height: 6px;
     width: 26px;
 
 }
 .active .menu-btn span:nth-of-type(3) {
     transform: translate(-100%, 0%) rotate(-45deg);
+    -webkit-tranform: translate(-100%, 0%) rotate(-45deg);
     width: 26px;
     height: 6px;
 }
