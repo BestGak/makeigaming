@@ -1,7 +1,7 @@
 // Header menu 
 
 const menuBtn = document.querySelector('.menu-btn');
-const menuLinks = document.querySelectorAll('.menu nav ul li a');
+const menuLinks = document.querySelectorAll('.menu nav a');
 menuBtn.addEventListener('click' , () => document.querySelector('html').classList.toggle('active'));
 menuLinks.forEach((item) => item.addEventListener('click' , () =>  document.querySelector('html').classList.toggle('active')));
 
