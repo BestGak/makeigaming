@@ -797,6 +797,10 @@ font-weight: 500;
     .menu {
         top: 70px;
     }
+    .header__btn {
+        font-size: 20px;
+        padding: 26px 11px;
+    }
 }
 
 @media screen and (max-width: 550px) {
